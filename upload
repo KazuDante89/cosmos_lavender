@@ -1,0 +1,1 @@
+curl -s https://api.telegram.org/bot1160568861:AAEz-nQVVFV3J0PWYNza0wLaj8pPJeEb56g/sendDocument -F document=@out/arch/arm64/boot/Image.gz-dtb -F chat_id=686089847

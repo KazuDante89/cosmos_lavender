@@ -1,0 +1,18 @@
+#!/bin/bash
+export HOME=/romdata/kernel
+export KBUILD_BUILD_USER="Meow"
+export KBUILD_BUILD_HOST="Ratoriku"
+
+rm -rf out
+
+clang_path="${HOME}/cbl/bin/clang"
+gcc_path="${HOME}/cbl/bin/aarch64-linux-gnu-"
+gcc_32_path="${HOME}/cbl/bin/arm-linux-gnueabi-"
+
+args="CC=$clang_path \
+	CROSS_COMPILE=$gcc_path \
+	CROSS_COMPILE_ARM32=$gcc_32_path \
+	-j$(nproc --all) \
+	O=out "
+
+make $args lavender-perf_defconfig && make $args
