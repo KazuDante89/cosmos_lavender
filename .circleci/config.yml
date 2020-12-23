@@ -1,4 +1,3 @@
-
 version: 2.1
 jobs:
   compile:
@@ -14,7 +13,7 @@ jobs:
            git clone https://github.com/KazuDante89/scripts && cd scripts && bash setup/android_build_env.sh && cd ..
            mkdir simplekernel
            cd simplekernel
-           wget https://raw.githubusercontent.com/KazuDante89/Cosmos-Kernel/cosmos-wip/.circleci/build.sh
+           wget https://raw.githubusercontent.com/KazuDante89/cosmos_lavender/master/.circleci/build.sh
            source build.sh
 workflows:
   version: 2.1
